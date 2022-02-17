@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Header from "./01_Header/header";
 import Main from "./02_Main/main";
 import Aside from "./03_Aside/aside";
-import Formulario from "./04-Formulario/formulario";
-import Footer from "./05-Footer/footer";
+import Form from "./04_Form/form";
+import Footer from "./05_Footer/footer";
 import "./index.scss";
 
 function ContainerPin(props){
@@ -13,7 +13,7 @@ function ContainerPin(props){
            <Header/>
            <Main/>
            <Aside/>
-           <Formulario/>
+           <Form/>
            <Footer/>
         </div>
     )

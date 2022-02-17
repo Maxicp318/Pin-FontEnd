@@ -21,7 +21,7 @@
 
 .container_form
 {
-    @include width-heigth(35%, 70%);
+    @include width-heigth(35%, 80%);
     align-self: center;
 }
 
@@ -36,7 +36,6 @@
     color: $color-negro-claro;
     .titulo_abajo_otro_color
     {
-        margin: 0% 0% 15%;
         color: $color-naranja
     }
 }
@@ -47,11 +46,10 @@
     {
         align-items: center;
     }
-        .container_form
+        .container_form 
         {
-            background: transparent url('../public/img/globos.png') 0% 0% no-repeat padding-box;
-            background-size: cover;
             width: 80%;
+            height: 70%; 
         } 
             .img_5
             {

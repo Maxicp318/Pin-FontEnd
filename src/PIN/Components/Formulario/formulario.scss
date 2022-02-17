@@ -1,7 +1,5 @@
-@import "../../Styles/Sass/02-Base/Color.scss";
-@import "../../Styles/Sass/01-Utilitles/mixins.scss";
-
-//FORM
+@import "../../Styles/Sass/01-utilitles/mixins";
+@import "../../Styles/Sass/02-base/color";
 
 %letras 
 {
@@ -35,10 +33,34 @@ form
     border-radius: 0rem;
 }
 
+textarea
+{
+    resize: none;
+}
+
+.error
+{
+    background-color: #ff0000;
+    border-radius: 0.3rem;
+    width: 64%;
+    color: $color-blanco;
+    padding: 2%;
+}
+
+.mensaje
+{
+    align-self: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 2%;
+    border-radius: .3rem;
+    background-color: green;
+    color:$color-blanco;
+}
+
 .boton_2 
 {
     @include width-heigth(100px, 45px);
-    margin-top: 10%;
+    margin-top: 5%;
     background: $color-naranja;
     border-radius: 1.5rem;
     padding: 2% 5.5%;
@@ -49,16 +71,4 @@ form
     {
         background: #bf6e39;
     }    
-}
-
-@media only screen and (max-width:767px)
-{
-    label
-    {
-        color: $color-naranja;
-    } 
-        .input
-        {
-            border-bottom: 1px solid $color-naranja 
-        }
 }
