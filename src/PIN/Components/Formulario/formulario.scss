@@ -72,3 +72,11 @@ textarea
         background: #bf6e39;
     }    
 }
+
+@media only screen and (max-width:767px)
+{
+    .error
+    {
+        width: 100%;
+    }
+}
