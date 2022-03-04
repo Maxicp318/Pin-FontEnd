@@ -1,58 +1,63 @@
 @import "../Styles/Sass/02-base/color";
 @import "../Styles/Sass/01-utilitles/mixins";
 
-//CONTAINER SECC FORM
-
-.container_5
-{
-    @include width-heigth;
-    display: flex;
+.container_5{
+    display: grid;
+    grid-template-rows: 100vh;
     background: rgb(242,244,241);
     background: linear-gradient(90deg, rgba(242,244,241,1) 70%, rgba(220,225,218,1) 70%);
-    justify-content: space-evenly;
 }
 
-.img_5
-{
+.container_form{
+    grid-row: 1/2;
+    width: 80%;
+    height: 80%;
     align-self: center;
-    @include width-heigth(45%, 50%);
-    order: 1;
+    justify-self: center;
 }
 
-.container_form
-{
-    @include width-heigth(35%, 80%);
-    align-self: center;
-}
-
-.titulo_5
-{
+.titulo_5{
     margin: 0%;
     font-family:'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 600;
     word-spacing: .45px;
     letter-spacing: .55px;
     color: $color-negro-claro;
-    .titulo_abajo_otro_color
-    {
-        color: $color-naranja
-    }
+        .titulo_abajo_otro_color{
+            color: $color-naranja
+        }
 }
 
-@media only screen and (max-width:767px)
-{
-    .container_5
-    {
-        align-items: center;
+@media only screen and (orientation: landscape){
+    .container_form{
+        height: 100%;
     }
-        .container_form 
-        {
-            width: 80%;
-            height: 70%; 
-        } 
-            .img_5
-            {
-                display:none
+        .titulo_5{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100%;
+            height: 14%;
+        }
+}
+
+@media only screen and (min-width:768px){
+    .container_5{
+        grid-template-columns: 50% 50%;
+    }
+        .titulo_5{
+            height: 20%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 100%;
+        }
+            .container_form{
+                height: 85%;
             }
+                .img_5{
+                    background: transparent url('../public/img/globos.png') 0% 0% no-repeat padding-box;
+                    background-size: cover;
+                    height: 50vh;
+                    width: 90%;
+                    align-self: center;
+                }
 }

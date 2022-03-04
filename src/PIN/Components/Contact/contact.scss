@@ -1,8 +1,7 @@
 @import "../../Styles/Sass/01-utilitles/mixins";
 @import "../../Styles/Sass/02-base/color";
 
-%letras 
-{
+%letras{
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     word-spacing: .013rem;
@@ -10,20 +9,17 @@
     font-weight: 500;
 }
 
-form
-{
-    display: flex;
-    flex-direction: column;
+.Container-Contact{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
-*label
-{
+*label{
     @extend %letras;
     color: $color-negro-claro2;    
 }
 
-.input
-{
+.input{
     background-color: transparent;
     border: 0px;
     border-bottom: 1px solid $color-negro-claro2;
@@ -33,22 +29,19 @@ form
     border-radius: 0rem;
 }
 
-textarea
-{
+textarea{
     resize: none;
 }
 
-.error
-{
+.error{
     background-color: #ff0000;
     border-radius: 0.3rem;
-    width: 64%;
+    width: 100%;
     color: $color-blanco;
     padding: 2%;
 }
 
-.mensaje
-{
+.mensaje{
     align-self: center;
     font-family: 'Roboto', sans-serif;
     padding: 2%;
@@ -57,8 +50,7 @@ textarea
     color:$color-blanco;
 }
 
-.boton_2 
-{
+.boton_2{
     @include width-heigth(100px, 45px);
     margin-top: 5%;
     background: $color-naranja;
@@ -67,16 +59,61 @@ textarea
     border: 0px;
     color: $color-blanco;
     @extend %letras;
-    &:hover 
-    {
-        background: #bf6e39;
-    }    
+        &:hover{
+            background: #bf6e39;
+        }    
 }
 
-@media only screen and (max-width:767px)
-{
-    .error
-    {
-        width: 100%;
+@media only screen and (orientation: landscape){
+    .Container-Contact{
+        display: grid;
+        grid-template-columns: 1fr 3% 1fr;
+        grid-template-rows: 33%;
     }
+        .input_2{
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+            .input_3{
+                grid-row: 2/3;
+            }
+                .input_4{
+                    grid-row: 2/3;
+                    grid-column: 3/4;
+                }
+                    .boton_2{
+                        grid-row: 3/4;
+                        margin-top: 0;
+                    }
+                        .mensaje{
+                            grid-row: 3/4;
+                            grid-column: 3/4;
+                        }
+}
+
+@media only screen and (min-width:768px){
+    .Container-Contact{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto)
+    }
+        .input_2{
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+            .input_3{
+                grid-row: 3/4;
+                grid-column: 1/2;
+            }
+                .input_4{
+                    grid-row: 4/5;
+                    grid-column: 1/2;
+                }
+                    .boton_2{
+                        grid-row: 5/6;
+                        margin-top: 5%;
+                    }
+                        .mensaje{
+                            grid-row: 6/7;
+                            grid-column: 1/2;
+                        }
 }
