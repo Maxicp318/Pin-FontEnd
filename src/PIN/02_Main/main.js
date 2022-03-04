@@ -1,6 +1,6 @@
 import React from "react";
 import Secc2 from "../Components/About/about";
-import Secc3 from "../Components/Products/secc_3";
+import Secc3 from "../Components/Products/products";
 import './main.scss';
 
 function Main(props){
