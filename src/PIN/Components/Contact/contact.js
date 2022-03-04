@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Formik, Form, Field, ErrorMessage} from 'formik';
-import './formulario.scss';
+import './contact.scss';
 
 function Formulario(){
     const [send, setSend] = useState (false);

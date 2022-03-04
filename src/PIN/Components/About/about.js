@@ -1,5 +1,5 @@
 import React from "react";
-import './secc_2.scss';
+import './about.scss';
 
 function Secc2(props){
 
