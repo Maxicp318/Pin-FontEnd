@@ -1,8 +1,7 @@
 @import "../../Styles/Sass/02-base/color";
 @import "../../Styles/Sass/01-utilitles/mixins";
 
-%letras 
-{
+%letras{
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     word-spacing: .013rem;
@@ -10,31 +9,23 @@
     font-weight: 500;
 }
 
-.container_acordion
-{
-    left: 4rem;
-    width: 50%;
+.container_acordeon{
+    width: 100%;
 }
 
-h3
-{
+h3{
     @extend %letras;
     font-weight: 600;
     color: $color-negro-claro2;
 }
 
-.parrafolista 
-{
+.parrafolista{
     @extend %letras;
     color: $color-negro-claro2;
 }
 
-@media only screen and (max-width:767px)
-{  
-    .container_acordion
-    {
-        left: 0rem;
-        width: 100%;
+@media only screen and (min-width:768px){
+    .container_acordeon{
+        width: 50%;
     }
-}    
-
+}
