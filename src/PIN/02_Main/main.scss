@@ -1,6 +1,4 @@
-main
-{
-    width:100%;
-    display: flex;
-    flex-flow: column wrap;
+.Container-Main{
+    display: grid;
+    grid-template-rows: repeat(2, 100vh);
 }

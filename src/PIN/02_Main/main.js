@@ -1,16 +1,16 @@
 import React from "react";
-import Secc2 from "../Components/About/about";
-import Secc3 from "../Components/Products/products";
-import './main.scss';
+import About from "../Components/About/about";
+import Products from "../Components/Products/products";
+import "./main.scss";
 
-function Main(props){
+function ContainerMain(props){
 
     return(
-        <main className="Main-Container">
-            <Secc2/>
-            <Secc3/>                                 
-        </main>
+        <div className="Container-Main">
+           <About/>
+           <Products/>
+        </div>
     )
 }
 
-export default Main;
+export default ContainerMain;import React from "react";

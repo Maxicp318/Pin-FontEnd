@@ -1,15 +1,15 @@
 import React from "react";
-import './products.scss';
+import "./products.scss";
 
-function Secc3(props){
+function ContainerProducts(props){
 
     return(
-        <div className="fondo_dos_colores" id="secc_3">
+           <div className="fondo_dos_colores" id="secc_3">
             <div className="container_img_2">                 
                 <div id="carouselExampleControls" className="carousel slide container_fondo_naranja" data-bs-ride="carousel">
-                    <div className="carousel-inner container_art_3">
+                    <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <article>                
+                            <article className="container_art_3">                
                                 <p className="parrafo_titulo">Sed ut perspiciatis</p>               
                                 <h2 className="titulo_3">Nemo Enim</h2>               
                                 <p className="parrafo_3">Sed ut perspiciatis unde omnis iste natus error sit 
@@ -18,7 +18,7 @@ function Secc3(props){
                             </article>
                         </div>
                         <div className="carousel-item">
-                            <article>                
+                            <article className="container_art_3">                
                                 <p className="parrafo_titulo">Sed ut perspiciatis</p>               
                                 <h2 className="titulo_3">Nemo Enim</h2>               
                                 <p className="parrafo_3">Sed ut perspiciatis unde omnis iste natus error sit 
@@ -41,4 +41,4 @@ function Secc3(props){
     )
 }
 
-export default Secc3;
+export default ContainerProducts;

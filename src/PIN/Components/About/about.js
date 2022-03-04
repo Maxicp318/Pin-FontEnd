@@ -1,7 +1,7 @@
 import React from "react";
-import './about.scss';
+import "./about.scss";
 
-function Secc2(props){
+function ContainerAbout(props){
 
     return(
         <div className="container_secc_2" id="secc_2">
@@ -17,8 +17,8 @@ function Secc2(props){
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
                 </section>
             </article> 
-        </div> 
+        </div>
     )
 }
 
-export default Secc2;
+export default ContainerAbout;
