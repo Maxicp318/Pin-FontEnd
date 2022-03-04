@@ -1,8 +1,5 @@
-@import "../Styles/Sass/01-utilitles/mixins";
+@import "../Styles/Sass/01-Utilitles/mixins.scss";
 
-.Header-Container 
-{   
+.Container-Header{
     @include width-heigth;
-    display: flex;
-    flex-flow: column wrap;
 }

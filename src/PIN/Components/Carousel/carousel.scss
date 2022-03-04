@@ -1,7 +1,5 @@
-@import "../../Styles/Sass/02-base/color";
-@import "../../Styles/Sass/01-utilitles/mixins";
-
-/*ARTICULO_1*/
+@import "../../Styles/Sass/01-Utilitles/mixins.scss";
+@import "../../Styles/Sass/02-Base/Color.scss";
 
 %letras 
 {
@@ -12,46 +10,41 @@
     font-weight: 500;
 }
 
-.container_carousel
-{
-    @include width-heigth;
-}
-
-.Fondo_Paisaje
-{
-    @include width-heigth;
+.Fondo_Paisaje{
+    background: transparent url('../../public/img/Paisaje.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+    height:100vh;
 }
 
 .container_art_1
 {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
     width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    padding-left: 7%;
-    position: absolute;
-    bottom: 32%;
+    position: relative;
+    top: 20%;
 }
 
 .titulo_1 
 {
-    width: 55%;
     margin: 0%;
-    padding-bottom: 3%;
+    padding: 10% 0% 2% 2%;
     @include tipografia;
+    font-size: 2.3rem;
     word-spacing: .3rem;
     letter-spacing: .1rem; 
 } 
 
 .parrafo_1 
 {
-    width: 38%;
-    padding-bottom: 2%;   
+    padding-left: 2%;   
     color: $color-blanco;
     @extend %letras;           
 }
 
 .boton_1 
 { 
+    margin-left: 1%;
     @include width-heigth(140px, 45px);              
     @extend %letras;
     background: $color-naranja;
@@ -68,7 +61,7 @@
 {
     margin: 0%;
     bottom: 22%;
-    left: 7%;
+    left: 2%;
     justify-content: start;
 }
 
@@ -77,29 +70,36 @@
     border-radius: 50%;
 }
 
-@media only screen and (max-width:1000px)
-{
-    .Fondo_Paisaje
-    {
-        width: auto;
+@media only screen and (orientation: landscape){
+    .titulo_1{
+        padding-top: 5%;
+        padding-bottom: 0%;
     }
+        .container_botones{
+            bottom: 1%;
+        }
 }
 
-@media only screen and (max-width:767px)
-{
-    .container_art_1
-    {
-        padding: 0%;
+@media only screen and (min-width:741px){
+    .container_art_1{
+        padding-left: 5%;
     }
-        .titulo_1
-        {
-            width: 100%;
+        .titulo_1{
+            font-size: 3rem;
+            width: 60%;
+            padding-bottom: 2%;
         }
-            .parrafo_1
-            {
-                width: 100%;
+            .parrafo_1{
+                width: 39%;
             }
-                .boton_1{
-                    width: 100%;
-                }   
-}   
+                .container_botones{
+                    left: 7%;
+                    bottom: 28%;
+                }
+}
+
+@media only screen and (min-width:1000px){
+    .Fondo_Paisaje{
+        background-repeat: round;
+    }
+}  

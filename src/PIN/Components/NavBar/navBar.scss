@@ -1,0 +1,87 @@
+@import "../../Styles/Sass/02-Base/Color.scss";
+@import "../../Styles/Sass/01-Utilitles/mixins.scss";
+
+%letras {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: .013rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+.Container-NavBar{
+    width: 100vw;
+    z-index: 10;
+    position: fixed;
+    padding-top: 3%;
+    padding-bottom: 3%;   
+    background: $color-naranja;
+    border-bottom: 1px solid $color-naranja;
+}
+
+.nav_menu_1{ 
+    @extend %letras;  
+    padding-top: 4%;  
+}
+
+.container_ul{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    margin-bottom: 5%;
+}
+
+.menu__a {
+    color: $color-blanco;  
+    text-decoration: none;  
+    &:hover {
+        color: $color-negro-claro2;
+    }
+}
+
+@media only screen and (orientation: landscape){
+    .container_ul{
+        flex-direction: row;
+        justify-content: space-evenly; 
+    }
+}
+
+@media only screen and (min-width:767px){
+    .container_ul{
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+        li{
+            margin-bottom: 0;
+        }
+}
+
+@media only screen and (min-width:992px){
+    .Container-NavBar{
+        display: grid;
+        height: 12vh;
+        padding: 0;
+        background: transparent;
+        position: fixed;
+    }
+        .nav_abajo{
+            background-color: $color-naranja;
+        }
+            .nav_menu_1 {
+                justify-content: end;
+                padding-top: 0%;
+                padding-right: 2%;
+            }
+                .container_ul{
+                    display: inline-flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 60%;       
+                }
+}

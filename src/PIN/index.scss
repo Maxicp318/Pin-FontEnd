@@ -1,15 +1,20 @@
-@import "./Styles/Sass/01-utilitles/variables";
+@import "./Styles/Sass/01-Utilitles/variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "./Styles/Sass/02-base/color";
-@import "./Styles/Sass/01-utilitles/mixins";
+@import "./Styles/Sass/02-Base/Color.scss";
+@import "./Styles/Sass/01-Utilitles/mixins.scss";
 @import "./01_Header/header.scss";
 @import "./02_Main/main.scss";
 @import "./03_Aside/aside.scss";
 @import "./04_Form/form.scss";
 @import "./05_Footer/footer.scss";
-@import "./Components/Acordeon/acordeon.scss";
+@import "./Components/NavBar/navBar.scss";
 @import "./Components/Carousel/carousel.scss";
-@import "./Components/Formulario/formulario.scss";
-@import "./Components/NavBar/nav.scss";
-@import "./Components/Secc_2/secc_2.scss";
-@import "./Components/Secc_3/secc_3.scss";
+@import "./Components/About/about.scss";
+@import "./Components/Products/products.scss";
+@import "./Components/Acordeon/acordeon.scss";
+@import "./Components/Contact/contact.scss";
+
+.index{
+    display: grid;
+    grid-template-rows: repeat(4, auto) 12vh;
+}
