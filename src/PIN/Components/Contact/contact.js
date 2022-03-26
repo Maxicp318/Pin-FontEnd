@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {Formik, Form, Field, ErrorMessage} from 'formik';
+import axios from "axios";
 import './contact.scss';
 
-function Contact(){
+function Contact(props){
     const [send, setSend] = useState (false);
 
     return(
@@ -48,9 +49,10 @@ function Contact(){
 
                 onSubmit={(valores, {resetForm}) => {
                     resetForm();
+                    console.log(valores);
                     console.log('Formulario enviado');
                     setSend(true);
-                    setTimeout(() => setSend(false), 5000)
+                    setTimeout(() => setSend(false), 5000)       
                 }}
             >
                 {({errors}) => (
