@@ -47,14 +47,21 @@ function Contact(props){
                     return errs
                 }}
 
-                onSubmit={(valores, {resetForm}) => {
-                    resetForm();
-                    console.log(valores);
-                    console.log('Formulario enviado');
-                    setSend(true);
-                    setTimeout(() => setSend(false), 5000)       
+                onSubmit={(event, {resetForm} ) => {                
+                    axios({
+                        url: "http://localhost:8000/api/form-save",
+                        method: "POST"
+                    },{data: event}).then(response => {
+                        console.log(response)
+                        resetForm()
+                        setSend(true);
+                        setTimeout(() => setSend(false), 5000)
+                    }).catch(err => {
+                        console.log(err)
+                    })                 
                 }}
             >
+                    
                 {({errors}) => (
                     <Form className="Container-Contact input_1">
                         <div className="form-floating">
