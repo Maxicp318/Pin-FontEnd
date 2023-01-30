@@ -1,6 +1,6 @@
 import React from "react";
 import "./carousel.scss";
-import Paisaje from "../../public/img/Paisaje.png";
+//import Paisaje from "../../public/img/Paisaje.png";
 
 function ContainerCarousel(props){
 
